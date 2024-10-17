@@ -24,31 +24,34 @@ Libraries:
   pip install sqlalchemy pyodbc
 Installation
 1. Clone the repository:
-    git clone [YOUR_GITHUB_REPOSITORY_LINK]
+   ```base          
+   git clone [YOUR_GITHUB_REPOSITORY_LINK]
     cd Rule_Engine_Implementation
-2. Update the database connection details in the get_connection function:
+3. Update the database connection details in the get_connection function:
+   ```bash
     conn = pyodbc.connect(
     'DRIVER={ODBC Driver 17 for SQL Server};'
     'SERVER=YOUR_SERVER_NAME;'
     'DATABASE=YOUR_DATABASE_NAME;'
     'Trusted_Connection=yes;'
-)
-3. Database Setup
+   )
+4. Database Setup
     Use Microsoft SQL Server Management Studio to create a database named Rule_engine.
     Create a table named Rules with the following schema:
+   ```bash
         CREATE TABLE Rules (
     RuleID INT PRIMARY KEY IDENTITY(1,1),
     RuleString NVARCHAR(MAX)
-);
-4. Insert some initial rules into the Rules table.
+   );
+6. Insert some initial rules into the Rules table.
 
-5. Features
+7. Features
     Fetches rules from the SQL Server database.
     Parses rules into an Abstract Syntax Tree (AST).
     Evaluates rules against provided input data.
-6. Testing
+8. Testing
    The application has been tested with various input scenarios to ensure the correctness of rule parsing and evaluation.
-7. Bonus Points
+9. Bonus Points
    The project includes error handling for unknown conditions and operators.
   The code is modular and can be extended easily for additional functionalities.
 
@@ -73,12 +76,13 @@ This project implements a real-time data processing system that continuously ret
 
 1. Setup Instructions
   Clone this repository:
-
+   ```bash
     git clone [YOUR_GITHUB_REPOSITORY_LINK]
     cd Weather_Monitoring_System
   Obtain your OpenWeatherMap API key and replace it in the code:
 
-  API_KEY = '08bb73cf460aa638d38ed76b86dabe33'
+     ```bash
+    API_KEY = '08bb73cf460aa638d38ed76b86dabe33'
 2. Run the application:
     
     python Weather_monitor.py
@@ -91,10 +95,10 @@ This project implements a real-time data processing system that continuously ret
 5. Testing
   The system includes tests for:
 
-    API connectivity and data retrieval.
-    Temperature conversion functionality.
-    Daily weather summary calculations.
-    Alert mechanisms based on user-defined thresholds.
+  API connectivity and data retrieval.
+  Temperature conversion functionality.
+  Daily weather summary calculations.
+  Alert mechanisms based on user-defined thresholds.
 6. Acknowledgements
     OpenWeatherMap API documentation for weather data access.
     Matplotlib documentation for visualization techniques.
